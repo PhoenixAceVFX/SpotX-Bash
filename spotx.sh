@@ -118,8 +118,8 @@ echo "╚═══╝╚╝    ╚══╝   ╚╝  ╚╝  ╚╝  ╚══�
 echo 
 [[ "${logoVar}" ]] && exit 0
 
-command -v unzip >/dev/null || { echo -e "\n${red}Error:${clr} unzip command not found.\nInstall unzip on your system then try again.\n" >&2; exit 1; }
-command -v zip >/dev/null || { echo -e "\n${red}Error:${clr} zip command not found.\nInstall zip on your system then try again.\n" >&2; exit 1; }
+command -v unzip >/dev/null || sudo pacman -S zip # fixed for arch specifically, i'm not knowledgable enough to make multiple cases
+command -v zip >/dev/null || sudo pacman -S zip
 
 macos_requirements_check() {
   (("${OSTYPE:6:2}" < 15)) && {
