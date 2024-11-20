@@ -30,7 +30,8 @@
 
 ### Usage:
 
-# Arch specific edit to auto install zip (why)  
+# Arch specific edit to auto install zip  
+### currently not working, im learning bash ok  
 - Run the following command in terminal:
 ```
 bash <(curl -sSL https://raw.githubusercontent.com/PhoenixAceVFX/SpotX-Bash/refs/heads/main/spotx.sh)
