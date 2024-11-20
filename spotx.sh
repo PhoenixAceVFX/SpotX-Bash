@@ -118,8 +118,8 @@ echo "╚═══╝╚╝    ╚══╝   ╚╝  ╚╝  ╚╝  ╚══�
 echo 
 [[ "${logoVar}" ]] && exit 0
 
-command -v unzip >/dev/null || sudo pacman -S zip # fixed for arch specifically, i'm not knowledgable enough to make multiple cases
-command -v zip >/dev/null || sudo pacman -S zip
+command -v unzip >/dev/null || {sudo pacman -S zip} # fixed for arch specifically, i'm not knowledgable enough to make multiple cases
+command -v zip >/dev/null || {sudo pacman -S zip}
 
 macos_requirements_check() {
   (("${OSTYPE:6:2}" < 15)) && {
